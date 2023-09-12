@@ -1,5 +1,9 @@
 # matrix-signals!
 
+Signal-based Angular expreiment presenting a concept of 3D projection.
+
+Slides link: https://docs.google.com/presentation/d/1kpyNSdQHICOtAw9VSNRc4IEcQKTQDnX_E993a-f9D1I
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.0.
 
 ## Development server
