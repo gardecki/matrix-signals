@@ -1,0 +1,26 @@
+:host {
+    display: block;
+    width: 100%;
+    height: 100%;
+    cursor: none;
+}
+
+line {
+    stroke: black;
+    stroke-width: 1;
+    stroke-dasharray: 5, 5;
+}
+
+circle {
+    fill: white; 
+    stroke: black;
+    stroke-width: 1;
+    stroke-dasharray: 5, 5;
+}
+
+text {
+    font-size: 20px;
+    text-anchor: middle;
+    alignment-baseline: middle;
+}
+

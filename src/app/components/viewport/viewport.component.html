@@ -1,0 +1,24 @@
+<svg:path
+  class="border"
+  [attr.d]="topLeft() | border : width() : height() : isHorizontal()"
+/>
+
+<svg:g [attr.transform]="center() | translate">
+  <ng-container *ngIf="showPoints">
+    <circle
+      *ngFor="let point of points; let i = index; trackBy: trackByIndex"
+      [attr.cx]="scale() * point[0]"
+      [attr.cy]="scale() * point[1]"
+    />
+  </ng-container>
+
+  <path
+    class="lines"
+    [attr.d]="points | path : lines : scale()"
+    shape-rendering="geometricPrecision"
+  />
+</svg:g>
+
+<svg:text [attr.transform]="topLeft() | translate" dx="10" dy="20">
+  {{ title | lowercase }} ({{ label | lowercase }})
+</svg:text>

@@ -1,0 +1,3 @@
+<div *ngFor="let option of options" class="selector"
+    [class.active]="isActive(option.value)"
+    (click)="optionClick.emit(option.value)">{{ option.text }}</div>

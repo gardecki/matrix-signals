@@ -1,0 +1,26 @@
+$selector-size: 32px;
+$selector-color: #d4d4d4;
+$active-selector-color: #2b2b2b;
+
+:host {
+   .selector {
+        display: flex;
+        width: $selector-size;
+        height: $selector-size;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid $selector-color;
+        border-radius: 50%;        
+        margin-bottom: 8px;
+        font-size: 16px;
+        color: $selector-color;
+        cursor: pointer;
+
+        &.active {
+            color: $active-selector-color;
+            border-color: $active-selector-color;
+            border-width: 2px;
+        }
+   }
+
+}

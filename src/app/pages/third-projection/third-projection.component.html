@@ -1,0 +1,29 @@
+<ng-container *ngIf="{ grid: grid() } as data">
+    <svg width="100%" height="100%">
+
+        <ng-container *ngFor="let cell of data.grid.cells;">
+            <g viewport class="cell" 
+                        [points]="getPoints(cell.value.object, cell.value.projector)()"
+                        [lines]="getLines(cell.value.object)"
+                        [title]="cell.value.object"
+                        [label]="cell.value.projector"
+                        [columns]="data.grid.columns" [columnIndex]="cell.columnIndex"
+                        [rows]="data.grid.rows" [rowIndex]="cell.rowIndex"
+                        [showPoints]="showPoints"></g>
+        </ng-container>
+        
+    </svg>
+</ng-container>
+
+
+<div class="selectors">
+    <ms-selector class="top"
+                 [options]="projectorOptions"
+                 [activeOptions]="activeProjectors()"
+                 (optionClick)="toggleProjector($event)"></ms-selector>
+
+    <ms-selector class="bottom"
+                 [options]="objectOptions"
+                 [activeOptions]="activeObjects()"
+                 (optionClick)="toggleObject($event)"></ms-selector>
+</div>
